@@ -1,17 +1,14 @@
 import { defineConfig } from 'sanity'
-import { deskTool } from 'sanity/desk'
+import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
   title: 'flyrunz-blog',
-
   projectId: 'tlz8fh1m',
   dataset: 'production',
-
-  plugins: [deskTool(), visionTool()],
-
+  plugins: [structureTool(), visionTool()],
   schema: {
     types: schemaTypes,
   },
